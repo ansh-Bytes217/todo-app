@@ -1,0 +1,71 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+* {
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Body*/
+body {
+  font-family: 'Roboto', sans-serif; 
+  background-color: #f7fafc; /* Light background */
+  color: #2d3748; 
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Button hover*/
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+input:focus,
+button:focus {
+  outline: none;
+  border-color: #4C51BF; /* Border color on focus */
+  box-shadow: 0 0 0 2px rgba(76, 81, 191, 0.5);
+}
+
+
+.completed {
+  text-decoration: line-through;
+  color: #9b9b9b;
+}
+
+/* Responsive design: */
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .todo-input input {
+    width: 100%; 
+  }
+
+  .todo-list {
+    width: 100%; 
+  }
+}
